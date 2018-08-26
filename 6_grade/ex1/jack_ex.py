@@ -52,7 +52,7 @@ def str_get_char(str, n):
 def str_list_add(names, jobs_name):
     # 在这里添加你代码
     names.append(jobs_name)
-    return 
+    return names
 
 
 """
