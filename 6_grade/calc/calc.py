@@ -8,7 +8,7 @@ legal_char  = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
 calc_op     = ['*', '/', '+', '-', '^']
 nums        = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 
-def calc_result(str_exp):
+def eval_proc(str_exp):
     '''
     完成输入算式的运算，并返回结果
 
@@ -104,13 +104,12 @@ def calc_core2(key, calc_expr):
     返回：      - 无
     '''
     global calc_str
-    #if( key == '0' and calc_str == '0') : return 
 
     if key == '=' or key == '\r':
         # 执行算术运算
         print(calc_str)
         calc_his.set(calc_str + '=')
-        calc_str = calc_result(calc_str)
+        calc_str = eval_proc(calc_str)
 
     elif key == 'C' or key == '\x08' or key == '\x7f':
         # 处理删除键
