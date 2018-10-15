@@ -79,8 +79,8 @@ def num_op_proc(str, key):
     if (str == '0' or (str[0] not in legal_char)) and key in nums:
         str = key
 
-    elif str == '0.' and key in nums:
-        str = key
+    #elif str == '0.' and key in nums:
+    #    str = key
 
     else:
         # 如果最后一个是运算符，输入的也是运算符，就用新的运算符替代
